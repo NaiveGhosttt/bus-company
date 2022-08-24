@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>965</width>
+    <height>889</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>客运管理系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableView" name="ShowInfotableView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>731</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>965</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_search">
+    <property name="title">
+     <string>信息查询</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>班次信息</string>
+     </property>
+     <addaction name="action_Today_search"/>
+     <addaction name="separator"/>
+     <addaction name="action_tomorrow_search"/>
+     <addaction name="separator"/>
+     <addaction name="action_DAT_search"/>
+    </widget>
+    <addaction name="menu"/>
+    <addaction name="separator"/>
+    <addaction name="action_search_PassengerList"/>
+    <addaction name="actionSearchTicketLeft"/>
+   </widget>
+   <widget class="QMenu" name="menu_file_operation">
+    <property name="title">
+     <string>文件操作</string>
+    </property>
+    <addaction name="action_openfile"/>
+    <addaction name="separator"/>
+    <addaction name="action_savefile"/>
+   </widget>
+   <widget class="QMenu" name="menumanage">
+    <property name="title">
+     <string>票务办理</string>
+    </property>
+    <addaction name="action_sale"/>
+    <addaction name="separator"/>
+    <addaction name="action_refund"/>
+   </widget>
+   <addaction name="menu_file_operation"/>
+   <addaction name="menumanage"/>
+   <addaction name="menu_search"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_openfile"/>
+   <addaction name="separator"/>
+   <addaction name="action_savefile"/>
+   <addaction name="separator"/>
+   <addaction name="action_sale"/>
+   <addaction name="separator"/>
+   <addaction name="action_refund"/>
+   <addaction name="separator"/>
+   <addaction name="action_add_Info"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="action_Today">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>今天</string>
+   </property>
+  </action>
+  <action name="action_Tomorrow">
+   <property name="text">
+    <string>明天</string>
+   </property>
+  </action>
+  <action name="action_DayAfter">
+   <property name="text">
+    <string>后天</string>
+   </property>
+  </action>
+  <action name="action_openfile">
+   <property name="text">
+    <string>导入班次...</string>
+   </property>
+  </action>
+  <action name="action_savefile">
+   <property name="text">
+    <string>保存文件...</string>
+   </property>
+  </action>
+  <action name="action_sale">
+   <property name="text">
+    <string>售票...</string>
+   </property>
+  </action>
+  <action name="action_refund">
+   <property name="text">
+    <string>退票...</string>
+   </property>
+  </action>
+  <action name="action_add_Info">
+   <property name="text">
+    <string>添加班次...</string>
+   </property>
+  </action>
+  <action name="action_search_PassengerList">
+   <property name="text">
+    <string>乘客列表</string>
+   </property>
+   <property name="toolTip">
+    <string comment="乘客列表" extracomment="乘客列表">乘客列表</string>
+   </property>
+  </action>
+  <action name="action_Today_search">
+   <property name="text">
+    <string>今天</string>
+   </property>
+  </action>
+  <action name="action_tomorrow_search">
+   <property name="text">
+    <string>明天</string>
+   </property>
+  </action>
+  <action name="action_DAT_search">
+   <property name="text">
+    <string>后天</string>
+   </property>
+  </action>
+  <action name="actionSearchTicketLeft">
+   <property name="text">
+    <string>余票查询</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
